@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Stats preview card component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          '2xl': { 'max': '1536px' },
+          'xl': { 'max': '1280px' },
+          'lg': { 'max': '1024px' },
+          'md': { 'max': '768px' },
+          'sm': { 'max': '640px' },
+        },
+        extend: {
+          colors: {
+            // ### Primary
+            accent: '#A858DA',
+            mainBackground: '#090B1A',
+            cardBackground: '#1B1938',
+            // ### Neutral
+            mainHeading: '#FFFFFF',
+            stats: '#ffffff',
+            mainParagraph: '#A4A2BB',
+            statHeadings: '#ffffff',
+          },
+          height: {
+            conHeight: '25rem',
+          },
+          width: {
+            conWidth: '30rem',
+          },
+          screen: {
+            xsm: '510px',
+          },
+
+        }
+      }
+    }
+  </script>
+  <style>
+    .no-scrollbar::-webkit-scrollbar {display: none;}
+  </style>
+
+</head>
+
+<body class="bg-mainBackground h-screen w-full flex items-center justify-center">
+
+
+  <main class="rounded-md overflow-hidden h-4/6 w-5/6 flex flex-row-reverse lg:flex-col lg:h-5/6">
+
+    <div class="bg-no-repeat bg-cover bg-center h-full w-3/6 2xl:w-full lg:h-2/6"
+      style="background-image: url(images/image-header-desktop.jpg);">
+      <div class="bg-accent h-full w-full opacity-55"></div>
+
+    </div>
+
+    <div
+      class="bg-cardBackground h-full w-3/6 2xl:w-full p-12 lg:h-4/6 text-center flex flex-col justify-between sm:p-8 overflow-scroll no-scrollbar">
+
+      <h2 class="text-4xl text-white font-bold sm:text-xl">Get <span class="text-accent">insights</span> that help your
+        business
+        grow.</h2>
+
+      <p class="text-mainParagraph text-2xl sm:text-base">Discover the benefits of data analytics and make better
+        decisions
+        regarding revenue, customer experience, and overall efficiency.</p>
+
+
+      <div class="grid grid-cols-3 text-center sm:gap-y-5 sm:[&>div]:col-span-3">
+        <div>
+          <h3 class="text-white font-bold text-4xl sm:text-xl">10k+</h3>
+          <p class="text-mainParagraph text-2xl sm:text-xl">COMPANIES</p>
+        </div>
+        <div>
+          <h3 class="text-white font-bold text-4xl sm:text-xl">314</h3>
+          <p class="text-mainParagraph text-2xl sm:text-xl">TEMPLATES</p>
+        </div>
+        <div>
+          <h3 class="text-white font-bold text-4xl sm:text-xl">12M+</h3>
+          <p class="text-mainParagraph text-2xl sm:text-xl">QUERIES</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
